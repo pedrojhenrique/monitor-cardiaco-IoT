@@ -1,6 +1,13 @@
 # monitor-cardiaco-IoT
 Meu projeto IoT da Universidade Presbiteriana Mackenzie. O projeto foi desenvolvido em C++ utilizando a IDE Arduino.
 
+## <br> Descrição
+Uilizarei o ESP32 para monitoramento de batimentos cardíacos wireless, 
+combinado com o sensor ECG AD8232 e um buzzer como atuador para alertas. O 
+desenvolvimento será feito na IDE do Arduino, empregando programação 
+específica para integrar hardware e software, incluindo a comunicação via MQTT 
+para transmissão de dados em tempo real para a plataforma Ubidots.
+
 ## <br> Instalação da IDE do Arduino
 Baixar a IDE do Arduino:
 
@@ -50,6 +57,61 @@ Clique no ícone de "Upload" (seta para a direita) na barra de ferramentas da ID
 Observe o LED na placa piscando, indicando que o programa está sendo executado corretamente.
 Depois que conseguir testar, faça upload do meu código "code-esp32", adaptando-o para sua finalidade.
 
+
+
+## <br> Modelo de Montagem 
+
+O sensor ECG AD8232 é conectado ao microcontrolador ESP32, que irá processar os dados dos batimentos cardíacos. O ESP32 está ligado a um buzzer, que será utilizado para alertar o usuário em caso de detecção de anomalias cardíacas. Os cabos de alimentação do sensor ECG são conectados às entradas de 3,3V e GND do ESP32, enquanto o sinal de saída do sensor é conectado a um dos pinos analógicos. O buzzer é conectado a um pino digital do ESP32 e a GND. Este sistema é alimentado por uma fonte de 3,7V, adequada para a operação dos componentes eletrônicos envolvidos. Também há a possibilidade de alimentar todo o circuito através de um cabo USB direto de um computador, já que a ESP32 possui entrada para tal.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/b08592e9-1129-4684-b1df-b84bd5339e8e)
+
+
+## <br> Configurando conta Ubidots
+
+Para publicar os dados no IoT Cloud, precisamos de alguma plataforma IoT. Portanto, Ubidots é uma dessas plataformas. Ubidots oferece uma plataforma para desenvolvedores que lhes permite capturar facilmente dados de sensores e transformá-los em informações úteis. Use a plataforma Ubidots para enviar dados para a nuvem a partir de qualquer dispositivo habilitado para Internet.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/8fab43f3-b999-438e-8804-7296ab05c5a7)
+
+## <br> Etapa 1: Criando uma conta Ubidots
+
+Acesse ubidots.com e crie uma conta. Você terá um período de teste de 30 dias.
+
+## <br> Etapa 2: Criando Dispositivo e Adicionando Variáveis
+
+Agora configure um dispositivo Ubidots. Para criá-lo, vá para a seção Dispositivos (Dispositivos > Dispositivos). Crie um novo dispositivo com o nome esp32.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/9426718e-4ad7-4662-9945-e9a59bd2ccdd)
+
+Depois que o dispositivo for criado, crie uma nova variável renomeando a variável para sensor.
+
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/7d07bbf5-cf7a-4797-81be-adadf4a71ac6)
+
+
+## <br> Etapa 3: Criação de painéis
+
+Vamos configurar um painel do Ubidots. Para criá-lo, vá para a seção Dashboard (Dados > Dashboard)
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/f8a0a774-460d-411c-bc99-60e8bb5e1e2c)
+
+## <br> Etapa 4: adicionar novos widgets
+
+Clique no sinal + no lado direito e em “Adicionar novo widget” e selecione seu widget.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/2d16283b-d125-4b74-b2e7-8398a679c137)
+
+Agora, selecione o tipo de widget que deseja exibir. No meu caso, escolho o “Gráfico de Linhas”:
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/281b8863-ae70-4d1b-aecf-49c2e48ee9b0)
+
+Em seguida, selecione a variável desejada para exibir os dados. Ubidots permite atribuir um nome personalizado ao widget, cor, período de dados a serem exibidos e muito mais. Para finalizar a criação do widget, pressione o ícone verde.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/e486c685-1d7e-4856-9b40-c2a7d277c262)
+
+Selecione seu dispositivo e variáveis ​​criados anteriormente, conforme mostrado na figura abaixo.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/eaf14047-0b5f-4de1-8aac-6b5f7c418497)
+
 ## <br> Funcionamento
 
 Bateria: Uma fonte de 3.7V, como uma bateria LiPo, é adequada para o protótipo, 
@@ -63,11 +125,9 @@ Comunicação MQTT: Configuração do ESP32 para enviar dados dos batimentos
 cardíacos via protocolo MQTT para um servidor ou plataforma na nuvem, 
 permitindo monitoramento remoto.
 
-## <br> Modelo de Montagem 
+## <br> Vídeo-demonstração
 
-O sensor ECG AD8232 é conectado ao microcontrolador ESP32, que irá processar os dados dos batimentos cardíacos. O ESP32 está ligado a um buzzer, que será utilizado para alertar o usuário em caso de detecção de anomalias cardíacas. Os cabos de alimentação do sensor ECG são conectados às entradas de 3,3V e GND do ESP32, enquanto o sinal de saída do sensor é conectado a um dos pinos analógicos. O buzzer é conectado a um pino digital do ESP32 e a GND. Este sistema é alimentado por uma fonte de 3,7V, adequada para a operação dos componentes eletrônicos envolvidos. Também há a possibilidade de alimentar todo o circuito através de um cabo USB direto de um computador, já que a ESP32 possui entrada para tal.
-
-![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/b08592e9-1129-4684-b1df-b84bd5339e8e)
+https://youtu.be/tPufbUc4Oz0
 
 ## <br> Dados obtidos via MQTT no Ubidots
 
