@@ -48,6 +48,7 @@ Vá para "Ferramentas" > "Porta" e selecione a porta COM que aparece com o nome 
 Abra um exemplo básico navegando em "Arquivo" > "Exemplos" > "01.Basics" > "Blink".
 Clique no ícone de "Upload" (seta para a direita) na barra de ferramentas da IDE para carregar o sketch na sua ESP32.
 Observe o LED na placa piscando, indicando que o programa está sendo executado corretamente.
+Depois que conseguir testar, faça upload do meu código "code-esp32", adaptando-o para sua finalidade.
 
 ## <br> Funcionamento
 
