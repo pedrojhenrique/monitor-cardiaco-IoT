@@ -2,10 +2,10 @@
 #include <PubSubClient.h> // Inclui a biblioteca PubSubClient para permitir comunicação MQTT.
 
 // Definições de constantes para conexão Wi-Fi e MQTT
-#define WIFISSID "Nasi" // Define o SSID da rede Wi-Fi.
-#define PASSWORD "26118950" // Define a senha da rede Wi-Fi.
-#define TOKEN "BBUS-v4NvLcnw90dMwd94nGzIcUdQkca3pW" // Token de autenticação para Ubidots.
-#define MQTT_CLIENT_NAME "dantesimba" // Nome do cliente MQTT utilizado na conexão MQTT.
+#define WIFISSID "Seu Wi-Fi" // Define o SSID da rede Wi-Fi.
+#define PASSWORD "Exemplo" // Define a senha da rede Wi-Fi.
+#define TOKEN "SEU TOKEN" // Token de autenticação para Ubidots.
+#define MQTT_CLIENT_NAME "SEU NOME PARA MQTT" // Nome do cliente MQTT utilizado na conexão MQTT.
 
 /****************************************
  * Definir Constantes
