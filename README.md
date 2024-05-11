@@ -14,9 +14,11 @@ Comunicação MQTT: Configuração do ESP32 para enviar dados dos batimentos
 cardíacos via protocolo MQTT para um servidor ou plataforma na nuvem, 
 permitindo monitoramento remoto.
 
-## <br> 2.8.	Modelo de Montagem 
+## <br> Modelo de Montagem 
 
 O sensor ECG AD8232 é conectado ao microcontrolador ESP32, que irá processar os dados dos batimentos cardíacos. O ESP32 está ligado a um buzzer, que será utilizado para alertar o usuário em caso de detecção de anomalias cardíacas. Os cabos de alimentação do sensor ECG são conectados às entradas de 3,3V e GND do ESP32, enquanto o sinal de saída do sensor é conectado a um dos pinos analógicos. O buzzer é conectado a um pino digital do ESP32 e a GND. Este sistema é alimentado por uma fonte de 3,7V, adequada para a operação dos componentes eletrônicos envolvidos. Também há a possibilidade de alimentar todo o circuito através de um cabo USB direto de um computador, já que a ESP32 possui entrada para tal.
+
+![image](https://github.com/pedrojhenrique/monitor-cardiaco-IoT/assets/105826347/b08592e9-1129-4684-b1df-b84bd5339e8e)
 
 ## <br> Dados obtidos via MQTT no Ubidots
 
