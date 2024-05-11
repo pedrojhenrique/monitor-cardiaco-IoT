@@ -1,6 +1,54 @@
 # monitor-cardiaco-IoT
 Meu projeto IoT da Universidade Presbiteriana Mackenzie. O projeto foi desenvolvido em C++ utilizando a IDE Arduino.
 
+## <br> Instalação da IDE do Arduino
+Baixar a IDE do Arduino:
+
+Acesse o site oficial do Arduino.
+Navegue até a seção de downloads e escolha a versão da IDE do Arduino compatível com seu sistema operacional (Windows, macOS ou Linux).
+Instalar a IDE:
+
+Windows: Execute o instalador baixado e siga as instruções na tela. Certifique-se de instalar todos os drivers necessários durante o processo de instalação.
+macOS: Abra o arquivo .zip baixado e arraste o aplicativo Arduino para a pasta "Aplicativos".
+Linux: Descompacte o arquivo baixado e execute o script de instalação.
+Verificar a Instalação:
+
+Abra a IDE do Arduino para garantir que foi instalada corretamente.
+Configurando a ESP32 na IDE do Arduino
+Adicionar o URL do Gerenciador de Placas para a ESP32:
+
+Na IDE do Arduino, vá até "Arquivo" > "Preferências".
+No campo "URLs Adicionais de Gerenciadores de Placas", insira o seguinte URL para o pacote da ESP32:
+
+https://dl.espressif.com/dl/package_esp32_index.json
+
+Clique em "OK" para salvar.
+
+## <br> Instalar a Placa ESP32:
+
+Navegue até "Ferramentas" > "Placa:" > "Gerenciador de Placas...".
+Na janela do Gerenciador de Placas, digite "ESP32" na barra de pesquisa.
+Encontre o pacote chamado "esp32 by Espressif Systems" e clique em "Instalar".
+
+## <br> Selecionar a Placa ESP32:
+
+Após a instalação, vá para "Ferramentas" > "Placa:" e selecione o modelo específico da sua ESP32 na lista de placas disponíveis.
+
+## <br> Conectar e Carregar um Sketch
+Conectar a ESP32 ao Computador:
+
+Use um cabo micro USB para conectar a ESP32 à porta USB do seu computador.
+
+## <br> Selecionar a Porta COM:
+
+Vá para "Ferramentas" > "Porta" e selecione a porta COM que aparece com o nome da sua ESP32. Se você não tem certeza de qual porta selecionar, desconecte a placa, abra o menu novamente para ver as portas listadas, reconecte a placa e veja qual nova porta aparece.
+
+## <br> Carregar um Sketch de Teste:
+
+Abra um exemplo básico navegando em "Arquivo" > "Exemplos" > "01.Basics" > "Blink".
+Clique no ícone de "Upload" (seta para a direita) na barra de ferramentas da IDE para carregar o sketch na sua ESP32.
+Observe o LED na placa piscando, indicando que o programa está sendo executado corretamente.
+
 ## <br> Funcionamento
 
 Bateria: Uma fonte de 3.7V, como uma bateria LiPo, é adequada para o protótipo, 
